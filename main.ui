@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>932</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Manajemen Member Gym</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralwidget { background-color: #0d0d1f; }
+    QMainWindow { background-color: #0d0d1f; }
+    QFrame#headerFrame { background-color: #1a1a33; border-radius: 15px; }
+    QLabel { color: #a5a5cc; font-family: 'Segoe UI'; font-weight: bold; }
+    QLineEdit, QComboBox { background-color: #1f1f3d; border: 1px solid #3d3d70; border-radius: 6px; color: white; padding: 8px; font-size: 12px; }
+    QPushButton { border-radius: 6px; color: white; font-weight: bold; font-size: 12px; height: 40px; text-transform: uppercase; }
+    QTableWidget { background-color: #161630; color: white; border: none; border-radius: 12px; gridline-color: #2d2d5a; }
+    QHeaderView::section { background-color: #1e1e3f; color: #7070db; font-weight: bold; border: none; padding: 6px; }
+   </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="mainV">
+    <property name="spacing">
+     <number>20</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="headerFrame">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>100</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>100</height>
+       </size>
+      </property>
+      <layout class="QHBoxLayout">
+       <item>
+        <widget class="QLabel" name="gym">
+         <property name="styleSheet">
+          <string>font-size: 45px; color: #5d5dfa; font-weight: 900; margin-left: 15px;</string>
+         </property>
+         <property name="text">
+          <string>🏋️‍</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout">
+         <item>
+          <widget class="QLabel" name="manajemen_member_gym">
+           <property name="styleSheet">
+            <string>font-size: 26px; color: white;</string>
+           </property>
+           <property name="text">
+            <string>Manajemen Keanggotaan Gym</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="sistem_manajemen">
+           <property name="styleSheet">
+            <string>color: #6c6c9c; font-size: 12px; font-weight: normal;</string>
+           </property>
+           <property name="text">
+            <string>Sistem manajemen member gym dan paket pelanggan</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QVBoxLayout">
+         <item>
+          <widget class="QLabel" name="label_total_val">
+           <property name="styleSheet">
+            <string>font-size: 45px; color: #5d5dfa; font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="total_member">
+           <property name="styleSheet">
+            <string>color: #6c6c9c; font-size: 11px;</string>
+           </property>
+           <property name="text">
+            <string>Total Member</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="bodyH">
+      <property name="spacing">
+       <number>25</number>
+      </property>
+      <item>
+       <widget class="QFrame" name="formContainer">
+        <property name="minimumSize">
+         <size>
+          <width>350</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>350</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <layout class="QVBoxLayout">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="id_member">
+           <property name="text">
+            <string>ID Member</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="input_id">
+           <property name="placeholderText">
+            <string>Masukkan ID...</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="nama_member">
+           <property name="text">
+            <string>Nama Member</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="input_nama">
+           <property name="placeholderText">
+            <string>Nama lengkap...</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="paket_pelanggan">
+           <property name="text">
+            <string>Paket Langganan</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="combo_paket">
+           <item>
+            <property name="text">
+             <string>Silver</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Gold</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Platinum</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="sisa_durasi">
+           <property name="text">
+            <string>Sisa Durasi (hari)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="input_durasi">
+           <property name="placeholderText">
+            <string>Contoh: 30</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer>
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_insert">
+           <property name="styleSheet">
+            <string>background-color: #5d5dfa;</string>
+           </property>
+           <property name="text">
+            <string>INSERT</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_delete">
+           <property name="styleSheet">
+            <string>background-color: #f64c5d;</string>
+           </property>
+           <property name="text">
+            <string>DELETE</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_search">
+           <property name="styleSheet">
+            <string>background-color: #2ca58d;</string>
+           </property>
+           <property name="text">
+            <string>SEARCH</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_sort">
+           <property name="styleSheet">
+            <string>background-color: #d4a017;</string>
+           </property>
+           <property name="text">
+            <string>SORT</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_display">
+           <property name="styleSheet">
+            <string>background-color: #7070db;</string>
+           </property>
+           <property name="text">
+            <string>DISPLAY</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_clear">
+           <property name="styleSheet">
+            <string>background-color: transparent; border: 1px solid #3d3d70; color: #6c6c9c;</string>
+           </property>
+           <property name="text">
+            <string>Bersihkan Form</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="tableContainer">
+        <property name="styleSheet">
+         <string>background-color: #161630; border-radius: 15px;</string>
+        </property>
+        <layout class="QVBoxLayout">
+         <item>
+          <widget class="QLabel" name="data_member">
+           <property name="styleSheet">
+            <string>font-size: 20px; color: white; margin-bottom: 10px;</string>
+           </property>
+           <property name="text">
+            <string>Data Member</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="tableWidget">
+           <property name="styleSheet">
+            <string notr="true">/* Style Anda */
+QTableWidget {
+    background-color: #24243e;
+    color: #ffffff;
+    gridline-color: #32325d;
+    border: 1px solid #32325d;
+    border-radius: 10px;
+}
+QHeaderView::section {
+    background-color: transparent;
+    color: #7d7dbd;
+    padding: 5px; /* Perkecil padding agar teks tidak sesak */
+    border: none;
+    border-bottom: 1px solid #32325d;
+    border-right: 1px solid #32325d; 
+    font-weight: bold;
+}
+</string>
+           </property>
+           <property name="columnCount">
+            <number>5</number>
+           </property>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>222</number>
+           </attribute>
+           <attribute name="horizontalHeaderMinimumSectionSize">
+            <number>32</number>
+           </attribute>
+           <attribute name="horizontalHeaderStretchLastSection">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="verticalHeaderVisible">
+            <bool>false</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string>No</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>ID Member</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Nama Member</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Paket</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Sisa Durasi (hari)</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
