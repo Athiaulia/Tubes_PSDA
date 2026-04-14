@@ -5,7 +5,7 @@
 
 ## Anggota Kelompok
 
-| No | Nama | NIM |
+| No | Nama | NPM |
 |----|------|-----|
 | 1 | Viola Ahza Amita | G1A025009 |
 | 2 | Fahsya Salsabila | G1A025011 |
