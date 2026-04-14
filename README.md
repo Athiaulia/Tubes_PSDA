@@ -22,7 +22,7 @@ Aplikasi **Manajemen Member Gym** berbasis GUI (Graphical User Interface) yang d
 Data yang dikelola:
 - ID Member
 - Nama Member
-- Paket Langganan (Basic / Silver / Gold)
+- Paket Langganan (Silver / Gold / Platinum)
 - Sisa Durasi (hari)
 
 **Logika Khusus:** Fitur sorting yang mengurutkan data berdasarkan sisa masa aktif member dari yang paling dekat expired (terkecil ke terbesar).
